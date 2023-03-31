@@ -1,0 +1,57 @@
+.terms_of_use{
+    .terms_title{
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 130%;
+        color: #202020;
+        margin-bottom: 40px;
+
+        @media #{$smallLaptop}{
+            margin-bottom: 30px;
+        }
+        @media #{$mobile}{
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+    .terms{
+        background: #F9F9FA;
+        border-radius: 4px;
+        padding: 65px 140px;
+        line-height: 19px;
+        
+        p{
+            margin-bottom: 16px;
+        }
+
+        .description{
+            span{
+                font-weight: 600;
+                line-height: 140%;
+
+            }
+
+            a{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 19px;
+                color: #475569;
+            }
+        }
+
+        .title{
+            text-transform: capitalize;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 140%;
+        }
+
+        @media #{$smallLaptop}{
+            padding: 42px 38px 42px 40px;
+        }
+        @media #{$mobile}{
+            padding: 19px 20px;
+        }
+    }
+        
+}

@@ -1,0 +1,87 @@
+.sales{
+    .sales_row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .sales_item{
+            flex: 0 0 auto;
+            width: calc(33.333% - 13px);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-between;
+            background-color: #fff;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+
+            .item_top{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                img{
+                    border-bottom: 1px solid #D6DFE4;
+                    border-radius: 4px 4px 0px 0px;
+                }
+
+                .texts{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 0 45px 24px 40px;
+    
+                    .title{
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #202020;
+                    }
+    
+                    .description{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #93A2AB;
+
+                        & br:nth-last-child(n+4 ){
+                            @media #{$smallLaptop}{
+                               display: none;
+                            }
+                        }
+                        @media #{$smallLaptop}{
+                            max-width: 87%;
+                        }
+
+                    }
+                }  
+            }
+    
+
+            
+            .item_bottom{
+                padding: 0 0 25px 40px;
+                .action{
+                    a{
+                       text-decoration: none;
+                       font-weight: 600;
+                        font-size: 16px;
+                        line-height: 140%; 
+                        color: #00A2FC;
+                        display: flex;
+                        gap: 8px;
+                        align-items: center;
+                    }
+                }  
+            }
+
+            @media #{$smallLaptop}{
+                width: 100%;
+            }
+        }
+        @media #{$smallLaptop}{
+            gap: 20px;
+        }
+    }
+}

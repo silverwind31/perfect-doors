@@ -1,0 +1,160 @@
+.tips{
+    .tips_row{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 40px;
+        margin-bottom: 40px;
+
+        .tips_item{
+            flex: 0 0 auto;
+            width: calc(33.333% - 13px);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: space-between;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+
+            .item_top{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
+                flex-direction: column;
+                
+                img{
+                    object-fit: cover;
+                    object-position: center;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+
+                .texts{
+                    padding: 0 45px 0 40px;
+                    .title{
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #202020;
+                        margin-bottom: 10px;
+                    }
+                    .date{
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #D6DFE4;
+                        margin-bottom: 20px;
+                    }
+                    .description{
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #93A2AB;
+                    }
+
+                    @media #{$mobile}{
+                        padding: 0 25px 0 30px;
+                    }
+                }
+            }
+            .item_bottom{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 45px 31.5px 40px;
+
+                .bottom_left{
+                    a{
+                        display: flex;
+                        font-weight: 600;
+                        color: #00A2FC;
+                        line-height: 140%;
+                        gap: 8px;
+                        align-items: center;
+                        text-decoration: none;
+                    }
+                }
+                .bottom_right{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #4489C8;
+                    }
+                }
+                @media #{$smallLaptop}{
+                    padding: 0 25px 29px 30px;
+                }
+            }
+
+            @media #{$smallLaptop}{
+                width: calc(50% - 10px);
+            }
+            @media #{$mobile}{
+                width: 100%;
+            }
+        }
+        @media #{$mobile}{
+           gap: 20px;
+        }
+    }
+    .tips_action{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        .all_insurances_opener{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+    
+            a{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 97%;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 21.5px 54.5px;
+            background: #00A2FC;
+            border-radius: 4px;
+            }
+        }
+        .pagination{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 230px;
+
+            a{
+                padding: 7px 16px;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                background: #F3F3F3;
+                opacity: 0.3;
+                border-radius: 4px;
+
+            &:hover{
+                background-color: #00A2FC;
+                opacity: 1;
+                color: #FFFFFF;
+            }
+            &:nth-child(5){
+                padding: 7px 8px;
+            }
+            &:nth-child(6){
+                padding: 0;
+                background: #F3F3F3;
+            }
+            }
+            p{
+                color: #202020;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,110 @@
+.favourites{
+
+    &.have_products{
+        margin-bottom: 79px;
+    .sort_form{
+        margin-bottom: 0;
+    }
+    }
+}
+
+.recommendations{
+
+    &.have_products{
+        .recommendations_row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+    
+                .recommendations_item{
+                    flex: 0 0 auto;
+                    width: calc(20%  - 16px);
+                    &:first-child{
+                        opacity: 0.3;
+                    }
+                    &:nth-child(9){
+                        opacity: 0.3;
+                    }
+    
+                    &.double{
+                        width: 25%;
+
+                        @media #{$mobile}{
+                            width: 100%;
+                        } 
+                        
+                    }
+                    
+    
+                    @media #{$smallLaptop}{
+                        width: calc(33% - 13px);
+                    } 
+                    @media #{$tab}{
+                        width: calc(50% - 10px);
+                    } 
+                    @media #{$mobile}{
+                        width: 100%;
+                    } 
+                }
+    
+        }
+    }
+    
+    .favourites_action{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: 40px;
+
+        .all_insurances_opener{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+    
+            a{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 97%;
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 21.5px 36px;
+            background: #00A2FC;
+            border-radius: 4px;
+            }
+        }
+        .pagination{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 230px;
+    
+            a{
+                padding: 7px 16px;
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                background: #F3F3F3;
+                opacity: 0.3;
+                border-radius: 4px;
+    
+            &:hover{
+                background-color: #00A2FC;
+                opacity: 1;
+                color: #FFFFFF;
+            }
+            &:nth-child(6){
+                padding: 0;
+                background: #F3F3F3;
+            }
+            }
+            p{
+                color: #202020;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,95 @@
+.portfolio_door{
+    .section_title{
+        margin-bottom: 40px;
+    }
+    .portfolio_door_row{
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        .row_item{
+            flex: 0 0 auto;
+            width: calc(25% - 15px);
+
+                img{
+                    object-fit: cover;
+                    object-position: center;
+                    width: 100%;
+                    max-height: 100%;
+
+                    @media #{$smallLaptop}{
+                        max-height: 600px;
+                    }
+                }
+
+            @media #{$smallLaptop}{
+                width: calc(50% - 10px);
+            }
+            @media #{$mobile}{
+                width: 100%;
+            }
+        }
+        @media #{$laptop}{
+           gap: 20px;
+        }
+    }
+    .portfolio_door_action{
+        .action_row{
+            display: flex;
+            justify-content: space-between;
+            padding: 19px 40px;
+            align-items: center;
+            background: #F9F9FA;
+            border-radius: 4px;
+
+            .action_item{
+                display: flex;
+                align-items: center;
+                gap: 40px;
+
+                .item_name{
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                a{
+                    text-decoration: none;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 97%;
+                    color: #fff;
+                    padding: 21.5px 36px;
+                    background: #00A2FC;
+                    border-radius: 4px;
+                }
+
+                @media #{$mobile}{
+                    flex-direction: column;
+                }
+                img{
+                        @media #{$mobile}{
+                            display: none;
+                        }
+                    }
+
+                    &:first-child{
+                        @media #{$mobile}{
+                            background-image: url(../images/vertical.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+                    }
+            }
+
+            @media #{$laptop}{
+                flex-direction: column;
+                gap: 40px;
+
+             }
+             @media #{$mobile}{
+                padding: 40px 0;
+            }
+        }
+    }
+}
